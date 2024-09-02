@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
+import MainCtaButton from "@/components/main-cta-button";
 
-export default function Hero() {
+export default async function Hero() {
   return (
     <section className="flex justify-center w-full py-12 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6 space-y-6 md:space-y-10">
@@ -21,14 +22,7 @@ export default function Hero() {
           <p className="text-muted-foreground text-xl md:text-2xl">
             Discover how PostHog works like a charm.
           </p>
-          <Link
-            href="https://posthog.com/"
-            className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-            prefetch={false}
-            target="_blank"
-          >
-            Get Started
-          </Link>
+          <MainCtaButton className="mt-8" />
         </div>
       </div>
     </section>

@@ -22,12 +22,12 @@ export function PHProvider({ children }: { children: React.ReactNode }) {
   return <PostHogProvider client={posthog}>{children}</PostHogProvider>;
 }
 
-export function NextAuthSessionProvider({
-  children,
-  session,
-}: {
-  children: React.ReactNode;
-  session: Session | null;
-}) {
-  return <SessionProvider session={session}>{children}</SessionProvider>;
-}
+// export function NextAuthSessionProvider({
+//   children,
+//   session,
+// }: {
+//   children: React.ReactNode;
+//   session: Session | null;
+// }) {
+//   return <SessionProvider session={session}>{children}</SessionProvider>;
+// }

@@ -6,7 +6,6 @@ import Footer from "@/components/footer";
 import CookieConsent from "@/components/cookie-consent";
 import Header from "@/components/header";
 import { Toaster } from "@/components/ui/sonner";
-import { NextAuthSessionProvider } from "@/providers/provider";
 import { auth } from "@/auth";
 import dynamic from "next/dynamic";
 const PostHogPageView = dynamic(
@@ -34,18 +33,16 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <PreviousPathnameProvider>
-        <NextAuthSessionProvider session={session}>
-          <PHProvider>
-            <body className={`${inter.className} min-h-dvh flex flex-col`}>
-              <PostHogPageView session={session} />
-              <Toaster position="top-center" />
-              <Header />
-              {children}
-              <Footer />
-              <CookieConsent variant="small" />
-            </body>
-          </PHProvider>
-        </NextAuthSessionProvider>
+        <PHProvider>
+          <body className={`${inter.className} min-h-dvh flex flex-col`}>
+            <PostHogPageView session={session} />
+            <Toaster position="top-center" />
+            <Header />
+            {children}
+            <Footer />
+            <CookieConsent variant="small" />
+          </body>
+        </PHProvider>
       </PreviousPathnameProvider>
     </html>
   );
