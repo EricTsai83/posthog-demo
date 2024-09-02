@@ -36,10 +36,7 @@ export default async function Hero() {
                     prefetch={false}
                     target="_blank"
                   >
-                    <Button
-                      id="main-cta"
-                      className="px-8 py-6 text-lg mt-4 w-40"
-                    >
+                    <Button className="px-8 py-6 text-lg mt-4 w-40">
                       <LoaderCircle className="animate-spin text-white" />
                     </Button>
                   </Link>
@@ -48,10 +45,10 @@ export default async function Hero() {
                 <MainCtaButtonServer className="mt-4" />
               </Suspense>
             </div>
-            <div>
+            {/* <div>
               <p className="text-blue-500">Get feature flag from client</p>
               <MainCtaButtonClient className="mt-4" />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

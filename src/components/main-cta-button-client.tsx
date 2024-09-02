@@ -34,7 +34,10 @@ export default function MainCtaButtonClient({
 
   return (
     <Link href="https://posthog.com/" prefetch={false} target="_blank">
-      <Button id="main-cta" className={cn("px-8 py-6 text-lg w-40", className)}>
+      <Button
+        id="main-cta-client"
+        className={cn("px-8 py-6 text-lg w-40", className)}
+      >
         {ctaState === "" ? (
           <LoaderCircle className="animate-spin text-white" />
         ) : (

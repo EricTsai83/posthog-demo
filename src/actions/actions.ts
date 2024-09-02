@@ -44,7 +44,6 @@ export async function authenticate(
     const username = formData.get("username");
     const password = formData.get("password");
     const callbackUrl = formData.get("callbackUrl")!;
-    console.log("callbackUrl", callbackUrl);
 
     await signIn("credentials", {
       username,

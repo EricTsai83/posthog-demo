@@ -1,9 +1,8 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-
 import SpecialDiscount from "@/components/special-discount";
 
-export default async function PrivatePage() {
+export default async function PublicePage() {
   return (
     <main className="flex flex-col items-center">
       <section className="flex justify-center w-full px-8 py-12 md:py-24 lg:py-32">
