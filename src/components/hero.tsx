@@ -1,6 +1,10 @@
-import Link from "next/link";
 import Image from "next/image";
-import MainCtaButton from "@/components/main-cta-button";
+import MainCtaButtonClient from "@/components/main-cta-button-client";
+import MainCtaButtonServer from "./main-cta-button-server";
+import { Suspense } from "react";
+import { Button } from "./ui/button";
+import { LoaderCircle } from "lucide-react";
+import Link from "next/link";
 
 export default async function Hero() {
   return (
@@ -22,7 +26,33 @@ export default async function Hero() {
           <p className="text-muted-foreground text-xl md:text-2xl">
             Discover how PostHog works like a charm.
           </p>
-          <MainCtaButton className="mt-8" />
+          <div className="flex flex-col sm:flex-row gap-12 mx-auto justify-center ">
+            <div>
+              <p className="text-rose-500">Get feature flag from server</p>
+              <Suspense
+                fallback={
+                  <Link
+                    href="https://posthog.com/"
+                    prefetch={false}
+                    target="_blank"
+                  >
+                    <Button
+                      id="main-cta"
+                      className="px-8 py-6 text-lg mt-4 w-40"
+                    >
+                      <LoaderCircle className="animate-spin text-white" />
+                    </Button>
+                  </Link>
+                }
+              >
+                <MainCtaButtonServer className="mt-4" />
+              </Suspense>
+            </div>
+            <div>
+              <p className="text-blue-500">Get feature flag from client</p>
+              <MainCtaButtonClient className="mt-4" />
+            </div>
+          </div>
         </div>
       </div>
     </section>

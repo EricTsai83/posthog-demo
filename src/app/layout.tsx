@@ -15,6 +15,7 @@ const PostHogPageView = dynamic(
   },
 );
 import { PreviousPathnameProvider } from "@/providers/previous-pathname-provider";
+import { getBootstrapData } from "@/lib/get-bootstrap-data";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,11 +30,12 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const session = await auth();
+  const bootstrapData = await getBootstrapData();
 
   return (
     <html lang="en">
       <PreviousPathnameProvider>
-        <PHProvider>
+        <PHProvider bootstrapData={bootstrapData}>
           <body className={`${inter.className} min-h-dvh flex flex-col`}>
             <PostHogPageView session={session} />
             <Toaster position="top-center" />
