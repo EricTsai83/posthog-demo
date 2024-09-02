@@ -3,6 +3,8 @@ import { Button } from "./ui/button";
 import { getBootstrapData } from "@/lib/get-bootstrap-data";
 import { cn } from "@/lib/utils";
 
+export const fetchCache = "force-no-store";
+
 export default async function MainCtaButtonServer({
   className,
 }: {
