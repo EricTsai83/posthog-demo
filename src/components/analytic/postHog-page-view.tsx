@@ -26,17 +26,17 @@ export default function PostHogPageView({
     }
   }, [pathname, searchParams, posthog]);
 
-  useEffect(() => {
-    if (session?.user?.name && !posthog._isIdentified()) {
-      posthog.identify(session.user.name, {
-        name: session.user.name,
-      });
-    }
+  // useEffect(() => {
+  //   if (session?.user?.name && !posthog._isIdentified()) {
+  //     posthog.identify(session.user.name, {
+  //       name: session.user.name,
+  //     });
+  //   }
 
-    if (!session && posthog._isIdentified()) {
-      posthog.reset();
-    }
-  }, [session, posthog]);
+  //   if (!session && posthog._isIdentified()) {
+  //     posthog.reset();
+  //   }
+  // }, [session, posthog]);
 
   return null;
 }
