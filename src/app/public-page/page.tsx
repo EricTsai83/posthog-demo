@@ -16,7 +16,7 @@ export default async function PublicePage() {
           <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 sm:justify-center">
             <div>
               <Link href="/">
-                <Button>Go to Home</Button>
+                <Button>Back to Home Page</Button>
               </Link>
             </div>
           </div>

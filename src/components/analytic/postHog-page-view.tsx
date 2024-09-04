@@ -23,20 +23,23 @@ export default function PostHogPageView({
       posthog.capture("$pageview", {
         $current_url: url,
       });
+      console.log("Track pageviews", posthog.get_distinct_id());
     }
   }, [pathname, searchParams, posthog]);
 
-  // useEffect(() => {
-  //   if (session?.user?.name && !posthog._isIdentified()) {
-  //     posthog.identify(session.user.name, {
-  //       name: session.user.name,
-  //     });
-  //   }
+  useEffect(() => {
+    if (session?.user?.name && !posthog._isIdentified()) {
+      posthog.identify(session.user.name, {
+        name: session.user.name,
+      });
+      console.log("identify user", posthog.get_distinct_id());
+    }
 
-  //   if (!session && posthog._isIdentified()) {
-  //     posthog.reset();
-  //   }
-  // }, [session, posthog]);
+    if (!session && posthog._isIdentified()) {
+      posthog.reset();
+      console.log("after reset", posthog.get_distinct_id());
+    }
+  }, [session, posthog]);
 
   return null;
 }

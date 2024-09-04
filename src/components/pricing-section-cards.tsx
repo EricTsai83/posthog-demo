@@ -19,6 +19,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { CheckIcon, MinusIcon } from "lucide-react";
+import React from "react";
 
 interface PlanFeature {
   type: string;
@@ -380,7 +381,7 @@ export default function PricingSectionCards() {
               </div>
               <Table>
                 {planFeatures.map((featureType) => (
-                  <>
+                  <React.Fragment key={featureType.type}>
                     <TableHeader>
                       <TableRow
                         key={featureType.type}
@@ -414,7 +415,7 @@ export default function PricingSectionCards() {
                         </TableRow>
                       ))}
                     </TableBody>
-                  </>
+                  </React.Fragment>
                 ))}
               </Table>
             </section>
@@ -425,7 +426,7 @@ export default function PricingSectionCards() {
               </div>
               <Table>
                 {planFeatures.map((featureType) => (
-                  <>
+                  <React.Fragment>
                     <TableHeader>
                       <TableRow
                         key={featureType.type}
@@ -458,7 +459,7 @@ export default function PricingSectionCards() {
                         </TableRow>
                       ))}
                     </TableBody>
-                  </>
+                  </React.Fragment>
                 ))}
               </Table>
             </section>
@@ -468,7 +469,7 @@ export default function PricingSectionCards() {
               </div>
               <Table>
                 {planFeatures.map((featureType) => (
-                  <>
+                  <React.Fragment>
                     <TableHeader>
                       <TableRow
                         key={featureType.type}
@@ -501,7 +502,7 @@ export default function PricingSectionCards() {
                         </TableRow>
                       ))}
                     </TableBody>
-                  </>
+                  </React.Fragment>
                 ))}
               </Table>
             </section>
@@ -511,7 +512,7 @@ export default function PricingSectionCards() {
               </div>
               <Table>
                 {planFeatures.map((featureType) => (
-                  <>
+                  <React.Fragment>
                     <TableHeader>
                       <TableRow
                         key={featureType.type}
@@ -545,7 +546,7 @@ export default function PricingSectionCards() {
                         </TableRow>
                       ))}
                     </TableBody>
-                  </>
+                  </React.Fragment>
                 ))}
               </Table>
             </section>

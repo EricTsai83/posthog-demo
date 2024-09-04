@@ -27,28 +27,9 @@ export default async function Hero() {
             Discover how PostHog works like a charm.
           </p>
           <div className="flex flex-col sm:flex-row gap-12 mx-auto justify-center ">
-            <div>
-              <p className="text-rose-500">Get feature flag from server</p>
-              <Suspense
-                fallback={
-                  <Link
-                    href="https://posthog.com/"
-                    prefetch={false}
-                    target="_blank"
-                  >
-                    <Button className="px-8 py-6 text-lg mt-4 w-40">
-                      <LoaderCircle className="animate-spin text-white" />
-                    </Button>
-                  </Link>
-                }
-              >
-                <MainCtaButtonServer className="mt-4" />
-              </Suspense>
-            </div>
-            {/* <div>
-              <p className="text-blue-500">Get feature flag from client</p>
-              <MainCtaButtonClient className="mt-4" />
-            </div> */}
+            <Link href="https://posthog.com/" prefetch={false} target="_blank">
+              <Button>Get Started</Button>
+            </Link>
           </div>
         </div>
       </div>

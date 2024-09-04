@@ -2,8 +2,8 @@
 
 import posthog from "posthog-js";
 import { PostHogProvider } from "posthog-js/react";
-import { SessionProvider } from "next-auth/react";
-import { type Session } from "next-auth";
+// import { SessionProvider } from "next-auth/react";
+// import { type Session } from "next-auth";
 
 type BootstrapData = {
   distinctID: string;
@@ -19,12 +19,13 @@ export function PHProvider({ children, bootstrapData }: Props) {
   if (typeof window !== "undefined") {
     posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY!, {
       api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST,
-      person_profiles: "always", // identified_only// or 'always' to create profiles for anonymous users as well
+      person_profiles: "identified_only", // or 'always' to create profiles for anonymous users as well
       capture_pageview: false, // Disable automatic pageview capture, as we capture manually
       capture_pageleave: true, // Enable pageleave capture
       bootstrap: bootstrapData,
-      loaded: function () {
-        console.log("PostHog loaded");
+      loaded: function (posthog) {
+        const distinct_id = posthog.get_distinct_id();
+        console.log(distinct_id);
       },
     });
   }
