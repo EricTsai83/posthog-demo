@@ -26,9 +26,3 @@ export default async function PublicePage() {
     </main>
   );
 }
-
-// async function getData() {
-//   const posthog = PostHogClient();
-//   const flags = await posthog.getAllFlags("eric@test1");
-//   return flags;
-// }

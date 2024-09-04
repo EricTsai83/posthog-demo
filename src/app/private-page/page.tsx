@@ -39,11 +39,23 @@ export default function PrivatePage() {
             >
               <MainCtaButtonServer className="mt-4 w-full h-36" />
             </Suspense>
-            <div className="flex space-x-4 justify-center">
-              <p className="text-orange-600">campaign default</p>
-              <p className="text-rose-600">campaign 1</p>
-              <p className="text-blue-600">campaign 2</p>
-              <p className="text-green-600">campaign 3</p>
+            <div className="flex flex-col sm:space-x-4 justify-center sm:flex-row">
+              <p className="text-orange-600 font-semibold">campaign default</p>
+              <p className="text-rose-600 font-semibold">campaign 1</p>
+              <p className="text-blue-600 font-semibold">campaign 2</p>
+              <p className="text-green-600 font-semibold">campaign 3</p>
+            </div>
+
+            <div className="pt-20">
+              <p className="font-semibold">
+                Note: Use the account below to see someone with a VIP tag.
+              </p>
+              <p>
+                <span className="font-semibold">user name:</span> eric
+              </p>
+              <p>
+                <span className="font-semibold">password:</span> test
+              </p>
             </div>
 
             {/* <div>

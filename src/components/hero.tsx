@@ -1,9 +1,5 @@
 import Image from "next/image";
-// import MainCtaButtonClient from "@/components/main-cta-button-client";
-import MainCtaButtonServer from "./main-cta-button-server";
-import { Suspense } from "react";
 import { Button } from "./ui/button";
-import { LoaderCircle } from "lucide-react";
 import Link from "next/link";
 
 export default async function Hero() {

@@ -32,6 +32,13 @@ export default function PostHogPageView({
       posthog.identify(session.user.name, {
         name: session.user.name,
       });
+
+      if (session.user.name === "eric") {
+        posthog.capture("$set", {
+          $set: { customerType: "VIP" },
+        });
+      }
+
       console.log("identify user", posthog.get_distinct_id());
     }
 
