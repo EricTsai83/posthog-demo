@@ -319,8 +319,8 @@ export default function PricingSectionCards() {
             </TableHeader>
             <TableBody>
               {planFeatures.map((featureType) => (
-                <>
-                  <TableRow className="bg-muted/50" key={featureType.type}>
+                <React.Fragment key={featureType.type}>
+                  <TableRow className="bg-muted/50">
                     <TableCell colSpan={5} className="font-bold">
                       {featureType.type}
                     </TableCell>
@@ -369,7 +369,7 @@ export default function PricingSectionCards() {
                       </TableCell>
                     </TableRow>
                   ))}
-                </>
+                </React.Fragment>
               ))}
             </TableBody>
           </Table>
@@ -383,10 +383,7 @@ export default function PricingSectionCards() {
                 {planFeatures.map((featureType) => (
                   <React.Fragment key={featureType.type}>
                     <TableHeader>
-                      <TableRow
-                        key={featureType.type}
-                        className="bg-muted hover:bg-muted"
-                      >
+                      <TableRow className="bg-muted hover:bg-muted">
                         <TableHead
                           colSpan={2}
                           className="w-10/12 text-primary font-bold"
@@ -426,12 +423,9 @@ export default function PricingSectionCards() {
               </div>
               <Table>
                 {planFeatures.map((featureType) => (
-                  <React.Fragment>
+                  <React.Fragment key={featureType.type}>
                     <TableHeader>
-                      <TableRow
-                        key={featureType.type}
-                        className="bg-muted hover:bg-muted"
-                      >
+                      <TableRow className="bg-muted hover:bg-muted">
                         <TableCell
                           colSpan={2}
                           className="w-10/12 text-primary font-bold"
@@ -469,12 +463,9 @@ export default function PricingSectionCards() {
               </div>
               <Table>
                 {planFeatures.map((featureType) => (
-                  <React.Fragment>
+                  <React.Fragment key={featureType.type}>
                     <TableHeader>
-                      <TableRow
-                        key={featureType.type}
-                        className="bg-muted hover:bg-muted"
-                      >
+                      <TableRow className="bg-muted hover:bg-muted">
                         <TableCell
                           colSpan={2}
                           className="w-10/12 text-primary font-bold"
@@ -512,12 +503,9 @@ export default function PricingSectionCards() {
               </div>
               <Table>
                 {planFeatures.map((featureType) => (
-                  <React.Fragment>
+                  <React.Fragment key={featureType.type}>
                     <TableHeader>
-                      <TableRow
-                        key={featureType.type}
-                        className="bg-muted hover:bg-muted"
-                      >
+                      <TableRow className="bg-muted hover:bg-muted">
                         <TableCell
                           colSpan={2}
                           className="w-10/12 text-primary font-bold"
