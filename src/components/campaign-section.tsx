@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 
 export default function CampaignSection() {
   return (
@@ -7,7 +8,7 @@ export default function CampaignSection() {
       <div className="container px-4 md:px-6 grid gap-8 md:grid-cols-3">
         <Link href="/campaign-one">
           <div className="space-y-4">
-            <img
+            <Image
               src="/placeholder.svg"
               width="300"
               height="200"
@@ -25,7 +26,7 @@ export default function CampaignSection() {
         </Link>
         <Link href="/campaign-two">
           <div className="space-y-4">
-            <img
+            <Image
               src="/placeholder.svg"
               width="300"
               height="200"
@@ -43,7 +44,7 @@ export default function CampaignSection() {
         </Link>
         <Link href="/campaign-three">
           <div className="space-y-4">
-            <img
+            <Image
               src="/placeholder.svg"
               width="300"
               height="200"

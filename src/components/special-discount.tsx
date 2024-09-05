@@ -1,6 +1,7 @@
 import Link from "next/link";
 import PostHogClient from "@/lib/posthog";
 import { auth } from "@/auth";
+import Image from "next/image";
 
 export default async function SpecialDiscount() {
   const session = await auth();
@@ -47,7 +48,7 @@ export default async function SpecialDiscount() {
             Claim Offer
           </Link>
         </div>
-        <img
+        <Image
           src="/placeholder.svg"
           width="550"
           height="400"
