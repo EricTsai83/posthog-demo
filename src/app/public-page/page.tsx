@@ -11,7 +11,8 @@ export default async function PublicePage() {
             Public Page
           </h1>
           <p className="text-muted-foreground text-xl md:text-2xl">
-            You can view this page whether you are logged in or not.
+            Observe the changes on this page between the logged-in and
+            logged-out states.
           </p>
           <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 sm:justify-center">
             <div>

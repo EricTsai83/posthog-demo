@@ -48,7 +48,8 @@ export default function PrivatePage() {
 
             <div className="pt-20">
               <p className="font-semibold">
-                Note: Use the account below to see someone with a VIP tag.
+                Note: Use the account below to see what banner is shown to
+                someone with a VIP tag.
               </p>
               <p>
                 <span className="font-semibold">user name:</span> eric

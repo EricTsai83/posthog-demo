@@ -80,7 +80,7 @@ export default async function Header() {
                 </div>
               </div>
             </div>
-            <DropdownMenuSeparator />
+            {/* <DropdownMenuSeparator />
             <DropdownMenuItem>
               <Link
                 href="#"
@@ -101,7 +101,7 @@ export default async function Header() {
                 <span>Settings</span>
               </Link>
             </DropdownMenuItem>
-            <DropdownMenuSeparator />
+            <DropdownMenuSeparator /> */}
             {session?.user && (
               <DropdownMenuItem>
                 <form

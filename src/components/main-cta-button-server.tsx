@@ -21,7 +21,7 @@ export default async function MainCtaButtonServer({
   className?: string;
 }) {
   const bootstrapData = await getBootstrapData();
-  console.log("bootstrapData", bootstrapData);
+  // console.log("bootstrapData", bootstrapData);
   const personProperties = await getPersonProperties(bootstrapData.distinctID);
   const flag = bootstrapData.featureFlags["main-cta"] as Campaignflags;
   // console.log("flag", flag);
