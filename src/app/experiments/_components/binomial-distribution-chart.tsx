@@ -165,7 +165,7 @@ export default function BinomialDistributionChart() {
   const averageRed = Math.round(state.n * state.pRed * 1000) / 1000;
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center w-full">
       <div className="mb-4">
         <div className="flex space-x-2">
           <label className="mr-2">
