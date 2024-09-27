@@ -35,7 +35,7 @@ export default async function Header() {
           href="/experiments"
           className="text-sm font-medium hover:underline underline-offset-4"
         >
-          experiments
+          Experiments
         </Link>
         <Link
           href="/public-page"
