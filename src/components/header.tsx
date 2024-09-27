@@ -4,7 +4,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuSeparator,
+  // DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import { Button } from "./ui/button";
@@ -25,6 +25,18 @@ export default async function Header() {
         <span className="sr-only">Acme Inc</span>
       </Link>
       <nav className="ml-auto flex gap-4 sm:gap-6 items-center">
+        <Link
+          href="/"
+          className="text-sm font-medium hover:underline underline-offset-4"
+        >
+          Home
+        </Link>
+        <Link
+          href="/experiments"
+          className="text-sm font-medium hover:underline underline-offset-4"
+        >
+          experiments
+        </Link>
         <Link
           href="/public-page"
           className="text-sm font-medium hover:underline underline-offset-4"
