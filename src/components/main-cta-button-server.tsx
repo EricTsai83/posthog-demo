@@ -16,8 +16,10 @@ enum Campaigns {
 type Campaignflags = keyof typeof Campaigns;
 
 export default async function MainCtaButtonServer({
+  id,
   className,
 }: {
+  id: string;
   className?: string;
 }) {
   const bootstrapData = await getBootstrapData();
@@ -38,7 +40,7 @@ export default async function MainCtaButtonServer({
   // console.log("buttonText", flag);
 
   return (
-    <Link href={`/${flag}`} prefetch={false}>
+    <Link id={id} href={`/${flag}`} prefetch={false}>
       {isVip ? (
         <Button
           className={cn(
@@ -51,7 +53,6 @@ export default async function MainCtaButtonServer({
         </Button>
       ) : (
         <Button
-          id="main-cta-server"
           className={cn("px-8 py-6 text-lg", className, {
             "bg-orange-600 hover:bg-orange-500": flag === "control",
             "bg-rose-600 hover:bg-rose-500": flag === "campaign-one",

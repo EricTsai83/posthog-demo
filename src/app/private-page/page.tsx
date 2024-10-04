@@ -37,7 +37,10 @@ export default function PrivatePage() {
                 </Link>
               }
             >
-              <MainCtaButtonServer className="mt-4 w-full h-36" />
+              <MainCtaButtonServer
+                id="main-cta-server"
+                className="mt-4 w-full h-36"
+              />
             </Suspense>
             <div className="flex flex-col sm:space-x-4 justify-center sm:flex-row">
               <p className="text-orange-600 font-semibold">campaign default</p>
