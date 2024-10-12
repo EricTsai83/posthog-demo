@@ -166,6 +166,9 @@ export default function BinomialDistributionChart() {
 
   return (
     <div className="flex flex-col items-center w-full">
+      <h2 className="text-center text-4xl font-bold mb-8">
+        Binomial Distribution Experiment
+      </h2>
       <div className="mb-4">
         <div className="flex space-x-2">
           <label className="mr-2">
