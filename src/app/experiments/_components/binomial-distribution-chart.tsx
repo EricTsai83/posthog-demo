@@ -253,7 +253,7 @@ export default function BinomialDistributionChart() {
             domain={dynamicDomain} // 使用動態域
             tickMargin={10}
             label={{
-              value: "機率",
+              value: "發生機率",
               fontSize: 16,
               angle: -90,
               position: "insideLeft",
